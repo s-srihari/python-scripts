@@ -1,0 +1,29 @@
+{"jobs":[
+    { "name":"sayHello",
+        "host": "devopsserver",
+        "parallel":"False",
+        "cmds": [
+            { "id": "1",
+              "title":"time",
+              "exec":"date",
+              "success": "0"
+            }
+        ]
+    },
+    { "name":"morningCheck",
+        "host": "devopsserver",
+        "parallel":"True",
+        "cmds": [
+            { "id": "1",
+                "title":"time",
+                "exec":"date",
+                "success": "0"
+              },
+              { "id": "2",
+                "title":"memory",
+                "exec":"free",
+                "success": "0"
+              }
+        ]
+    }
+]}
