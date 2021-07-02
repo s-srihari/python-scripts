@@ -47,5 +47,4 @@ Execution has timed out. Command 'sleep 7' timed out after 5 seconds
 
 
 ## TODO
-    -   Verify success return code
-    -   parallelize tasks based on config
+     -   parallelize tasks based on config
