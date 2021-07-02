@@ -5,8 +5,8 @@
         "cmds": [
             { "id": "1",
               "title":"time",
-              "exec":"date",
-              "success": "0"
+              "exec": "echo 'Hi Friends'",
+              "output": "0"
             }
         ]
     },
@@ -16,14 +16,36 @@
         "cmds": [
             { "id": "1",
                 "title":"time",
-                "exec":"date",
-                "success": "0"
+                "exec": "echo '123' | wc -c",
+                "output": "1"
               },
               { "id": "2",
                 "title":"memory",
-                "exec":"free",
-                "success": "0"
+                "exec":["free"],
+                "output": "0"
               }
+        ]
+    },
+    { "name":"wrongCmd",
+        "host": "devopsserver",
+        "parallel":"False",
+        "cmds": [
+            { "id": "1",
+              "title":"time",
+              "exec":["date123"],
+              "output": "0"
+            }
+        ]
+    },
+    { "name":"longRun",
+        "host": "devopsserver",
+        "parallel":"False",
+        "cmds": [
+            { "id": "1",
+              "title":"longRun",
+              "exec":"sleep 7",
+              "output": "0"
+            }
         ]
     }
 ]}
